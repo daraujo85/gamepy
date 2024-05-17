@@ -23,6 +23,13 @@ wrong_answer_sound = pygame.mixer.Sound("wrong_answer.wav")
 move = pygame.mixer.Sound("move.wav")
 suspense = pygame.mixer.Sound("suspense.wav")
 
+# Ajustar o volume dos sons
+collision_sound.set_volume(0.2)
+correct_answer_sound.set_volume(0.2)
+wrong_answer_sound.set_volume(0.2)
+move.set_volume(0.2)
+suspense.set_volume(0.2)
+
 # Configurações das cores
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -416,7 +423,7 @@ def main_game_loop(category):
         if password_correct:
             for _ in range(6):
                 screen.fill(BLACK)
-                draw_text("Acesso liberado!", (300, 300), GREEN)
+                draw_text("Acesso liberado!", (250, 300), GREEN)
                 pygame.display.flip()
                 time.sleep(0.5)
                 screen.fill(BLACK)
